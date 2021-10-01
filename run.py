@@ -46,23 +46,49 @@ def user_input_age():
     if is_digit(age) is False:
         print("Please do not include letter in your age.")
         user_input_age()
+    elif int(age) > 120:
+        print("Is this a correct age?")
+        user_input_age()
     else:
         return age
 
 def choose_unit():
+    """
+    Function will collect information about unit of measurment standard
+    """
     enter = 'Enter unit of measurement by typing a number:\n'
     si = '1. The International System of Units (SI)\n'
     usc = '2. United States Customary Units (USC)\n'
-    unit = input(f"{enter}\n{si}\n{usc}\n")
-    if unit == "1":
-        print(f"{name.capitalize()} the units you choosed in SI")
+    global enter_weight
+    unit_type = input(f"{enter}\n{si}\n{usc}\n")
+    if unit_type == "1":
+        print(f"{name.capitalize()} the units you choosed is SI")
+        enter_weight = "please enter your weight in kg"
         return True
-    elif unit == "2":
-        print(f"{name.capitalize()} the units you choosed in USC")
+    elif unit_type == "2":
+        print(f"{name.capitalize()} the units you choosed is USC")
+        enter_weight = "please enter your weight in lbs"
         return False
     else:
         print("Please choose correct value 1 or 2")
         choose_unit()
+
+
+def user_input_weight():
+    """
+    Function colecting a user weight
+    and checking vaule if is digit using is_digit()
+    """
+    weight = input(f"Hi {name.capitalize()} {enter_weight}:\n")
+
+    if is_digit(weight) is False:
+        print("Please do not include letter in your weight.")
+        user_input_weight()
+    else:
+        return weight
+
+
+
 
 def main():
     """
@@ -71,6 +97,7 @@ def main():
     user_input_name()
     user_input_age()
     choose_unit()
+    user_input_weight()
 
 
 
