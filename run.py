@@ -13,41 +13,66 @@ scope:
 - Print result
 - do it again?
 """
-
-
-def collect_name(user_name):
+def is_digit(user_input):
     """
-    Check user name input and return result
+    Function is checking if value is number
+    return true or false
     """
-    if any(char.isdigit() for char in user_name):
+    if any(char.isdigit() for char in user_input):
+        return True
+    else:
+        return False
+
+def user_input_name():
+    """
+    Function colecting a user name and use it globally
+    and checking vaule if string usnig is_digit()
+    """
+    global name
+    name = input('Please enter your name:\n')
+    if is_digit(name) is True:
         print("Please do not include digits in your name.")
-        main()
+        user_input_name()
     else:
-        print("Nice to meet you " + user_name)
-        return user_name
+        return name
 
 
-def collect_age(user_age):
+def user_input_age():
     """
-    Check user age input and return result
+    Function colecting a user age 
+    and checking vaule if is digit using is_digit()
     """
-    if any(char.isalpha() for char in user_age):
-        print("Please do not include letters in your age.")
+    age = input(f"Hi {name.capitalize()} please enter your age:\n")
+    if is_digit(age) is False:
+        print("Please do not include letter in your age.")
+        user_input_age()
     else:
-        print("Your age is " + user_age)
-        return user_age
+        return age
 
+def choose_unit():
+    enter = 'Enter unit of measurement by typing a number:\n'
+    si = '1. The International System of Units (SI)\n'
+    usc = '2. United States Customary Units (USC)\n'
+    unit = input(f"{enter}\n{si}\n{usc}\n")
+    if unit == "1":
+        print(f"{name.capitalize()} the units you choosed in SI")
+        return True
+    elif unit == "2":
+        print(f"{name.capitalize()} the units you choosed in USC")
+        return False
+    else:
+        print("Please choose correct value 1 or 2")
+        choose_unit()
 
 def main():
     """
     Run all program functions
     """
-    name = input('Please enter your name:\n')
-    user_name = str(name)
-    collect_name(user_name)
-    age = input('Please enter your age:\n')
-    user_age = age
-    collect_age(user_age)
+    user_input_name()
+    user_input_age()
+    choose_unit()
+
+
 
 
 print("Welcome in the BMI Calculator")
