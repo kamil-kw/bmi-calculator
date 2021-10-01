@@ -13,6 +13,8 @@ scope:
 - Print result
 - do it again?
 """
+
+
 def is_digit(user_input):
     """
     Function is checking if value is number
@@ -22,6 +24,7 @@ def is_digit(user_input):
         return True
     else:
         return False
+
 
 def user_input_name():
     """
@@ -52,6 +55,7 @@ def user_input_age():
     else:
         return age
 
+
 def choose_unit():
     """
     Function will collect information about unit of measurment standard
@@ -60,14 +64,18 @@ def choose_unit():
     si = '1. The International System of Units (SI)\n'
     usc = '2. United States Customary Units (USC)\n'
     global enter_weight
+    global enter_height
+    global unit_type
     unit_type = input(f"{enter}\n{si}\n{usc}\n")
     if unit_type == "1":
         print(f"{name.capitalize()} the units you choosed is SI")
         enter_weight = "please enter your weight in kg"
+        enter_height = "please enter your weight in cm"
         return True
     elif unit_type == "2":
         print(f"{name.capitalize()} the units you choosed is USC")
         enter_weight = "please enter your weight in lbs"
+        enter_height = "please enter your weight in in"
         return False
     else:
         print("Please choose correct value 1 or 2")
@@ -79,6 +87,7 @@ def user_input_weight():
     Function colecting a user weight
     and checking vaule if is digit using is_digit()
     """
+    global weight
     weight = input(f"Hi {name.capitalize()} {enter_weight}:\n")
 
     if is_digit(weight) is False:
@@ -88,6 +97,28 @@ def user_input_weight():
         return weight
 
 
+def user_input_height():
+    """
+    Function colecting a user height
+    and checking vaule if is digit using is_digit()
+    """
+    global height
+    height = input(f"Hi {name.capitalize()} {enter_height}:\n")
+
+    if is_digit(height) is False:
+        print("Please do not include letter in your height.")
+        user_input_height()
+    else:
+        return height
+
+
+def bmi_calculator():
+    if unit_type == "1":
+        si_bmi = round(int(weight)/((int(height)/100)**2), 2)
+        print(f"{name} your BMI is {si_bmi} kg/m^2")
+    else:
+        usc_bmi = round((int(weight)/(int(height)**2)*703), 2)
+        print(f"{name} your BMI is {usc_bmi} lbs/in^2")
 
 
 def main():
@@ -98,8 +129,8 @@ def main():
     user_input_age()
     choose_unit()
     user_input_weight()
-
-
+    user_input_height()
+    bmi_calculator()
 
 
 print("Welcome in the BMI Calculator")
