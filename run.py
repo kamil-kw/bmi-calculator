@@ -29,7 +29,7 @@ def is_digit(user_input):
 def user_input_name():
     """
     Function colecting a user name and use it globally
-    and checking vaule if string usnig is_digit()
+    and checking value if is string using is_digit() function
     """
     global name
     name = input('Please enter your name:\n')
@@ -43,8 +43,9 @@ def user_input_name():
 def user_input_age():
     """
     Function colecting a user age 
-    and checking vaule if is digit using is_digit()
+    and checking value if is digit using is_digit() function
     """
+    global age
     age = input(f"Hi {name.capitalize()} please enter your age:\n")
     if is_digit(age) is False:
         print("Please do not include letter in your age.")
@@ -121,14 +122,32 @@ def bmi_calculator():
 
 
 def bmi_categories():
-    if float(bmi) <= 18.5:
-        print(f"{name} your BMI Category is UNDERWEIGHT")
-    elif float(bmi) >= 18.5 and float(bmi) <= 24.9:
-        print(f"{name} your BMI Category is NORMAL")
-    elif float(bmi) >= 25 and float(bmi) <= 29.9:
-        print(f"{name} your BMI Category is OVERWEIGHT")
+    if age < 18:
+        if float(bmi) <= 18.5:
+            print(f"{name} your BMI Category is UNDERWEIGHT")
+        elif float(bmi) >= 18.5 and float(bmi) <= 24.9:
+            print(f"{name} your BMI Category is NORMAL")
+        elif float(bmi) >= 25 and float(bmi) <= 29.9:
+            print(f"{name} your BMI Category is OVERWEIGHT")
+        else:
+            print(f"{name} your BMI Category is OBESITY")
     else:
-        print(f"{name} your BMI Category is OBESITY")
+        if float(bmi) <= 16:
+            print(f"{name} your BMI Category is Severe Thinness")
+        elif float(bmi) >= 16 and float(bmi) <= 17:
+            print(f"{name} your BMI Category is Moderate Thinness")
+        elif float(bmi) >= 17 and float(bmi) <= 18.5:
+            print(f"{name} your BMI Category is Mild Thinness")
+        elif float(bmi) >= 18.5 and float(bmi) <= 25:
+            print(f"{name} your BMI Category is Normal")
+        elif float(bmi) >= 25 and float(bmi) <= 30:
+            print(f"{name} your BMI Category is Overweight")
+        elif float(bmi) >= 30 and float(bmi) <= 35:
+            print(f"{name} your BMI Category is Obese Class I")
+        elif float(bmi) >= 35 and float(bmi) <= 40:
+            print(f"{name} your BMI Category is Obese Class II")
+        else:
+            print(f"{name} your BMI Category is Obese Class III")
 
 
 def main():
@@ -142,6 +161,7 @@ def main():
     user_input_height()
     bmi_calculator()
     bmi_categories()
+
 
 print("Welcome in the BMI Calculator")
 main()
