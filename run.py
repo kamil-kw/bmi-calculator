@@ -111,12 +111,24 @@ def user_input_height():
 
 
 def bmi_calculator():
+    global bmi
     if unit_type == "1":
-        si_bmi = round(float(weight)/(float(height)/100)**2, 2)
-        print(f"{name} your BMI is {si_bmi} kg/m^2")
+        bmi = round(float(weight)/(float(height)/100)**2, 2)
+        print(f"{name} your BMI is {bmi} kg/m^2")
     else:
-        usc_bmi = round(float(weight)/(float(height)**2)*703, 2)
-        print(f"{name} your BMI is {usc_bmi} lbs/in^2")
+        bmi = round(float(weight)/(float(height)**2)*703, 2)
+        print(f"{name} your BMI is {bmi} lbs/in^2")
+
+
+def bmi_categories():
+    if float(bmi) <= 18.5:
+        print(f"{name} your BMI Category is UNDERWEIGHT")
+    elif float(bmi) >= 18.5 and float(bmi) <= 24.9:
+        print(f"{name} your BMI Category is NORMAL")
+    elif float(bmi) >= 25 and float(bmi) <= 29.9:
+        print(f"{name} your BMI Category is OVERWEIGHT")
+    else:
+        print(f"{name} your BMI Category is OBESITY")
 
 
 def main():
@@ -129,7 +141,7 @@ def main():
     user_input_weight()
     user_input_height()
     bmi_calculator()
-
+    bmi_categories()
 
 print("Welcome in the BMI Calculator")
 main()
