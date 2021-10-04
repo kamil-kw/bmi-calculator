@@ -61,22 +61,20 @@ def choose_unit():
     Function will collect information about unit of measurment standard
     """
     enter = 'Enter unit of measurement by typing a number:\n'
-    si = '1. The International System of Units (SI)\n'
-    usc = '2. United States Customary Units (USC)\n'
+    si = '1. The International System of Units (SI) cm or kg\n'
+    usc = '2. United States Customary Units (USC) in or lbs\n'
     global enter_weight
     global enter_height
     global unit_type
     unit_type = input(f"{enter}\n{si}\n{usc}\n")
     if unit_type == "1":
-        print(f"{name.capitalize()} the units you choosed is SI")
+        print(f"{name.capitalize()} the units you choosed is SI\n")
         enter_weight = "please enter your weight in kg"
-        enter_height = "please enter your weight in cm"
-        return True
+        enter_height = "please enter your height in cm"
     elif unit_type == "2":
-        print(f"{name.capitalize()} the units you choosed is USC")
+        print(f"{name.capitalize()} the units you choosed is USC\n")
         enter_weight = "please enter your weight in lbs"
-        enter_height = "please enter your weight in in"
-        return False
+        enter_height = "please enter your height in in"
     else:
         print("Please choose correct value 1 or 2")
         choose_unit()
@@ -114,10 +112,10 @@ def user_input_height():
 
 def bmi_calculator():
     if unit_type == "1":
-        si_bmi = round(int(weight)/((int(height)/100)**2), 2)
+        si_bmi = round(float(weight)/(float(height)/100)**2, 2)
         print(f"{name} your BMI is {si_bmi} kg/m^2")
     else:
-        usc_bmi = round((int(weight)/(int(height)**2)*703), 2)
+        usc_bmi = round(float(weight)/(float(height)**2)*703, 2)
         print(f"{name} your BMI is {usc_bmi} lbs/in^2")
 
 
