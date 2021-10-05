@@ -47,10 +47,10 @@ def user_input_name():
     # variable to use outcome globally in other functions
     global name
     # User name input
-    name = input('Please enter your name:\n')
+    name = input('\n\033[1;32;40mPlease enter your name:\n')
     # if characters is digit -> message to user and repeat this function
     if is_digit(name) is True:
-        print("Please do not include digits in your name.")
+        print("\033[1;31;40mPlease do not include digits in your name.")
         user_input_name()
     # else return name
     else:
@@ -64,15 +64,17 @@ def user_input_age():
     """
     # variable to use outcome globally in other functions
     global age
+    # variable to ensure PEP8 convention pass (amount of characters in line)
+    enter_age = " please enter your age:"
     # User age input
-    age = input(f"\nHi {name.capitalize()} please enter your age:\n")
+    age = input(f"\n\033[1;32;40mHi {name.capitalize()}{enter_age}\n")
     # if characters is letter -> message to user and repeat this function
     if is_letter(age) is True:
-        print("\nPlease do not include letter in your age.")
+        print("\n\033[1;31;40mPlease do not include letter in your age.")
         user_input_age()
     # if age is to high over 120 -> message to user and repeat this function
     elif int(age) >= 120:
-        print("\nIs this a correct age?")
+        print("\n\033[1;31;40mIs this a correct age?")
         user_input_age()
     # else return age
     else:
@@ -92,7 +94,7 @@ def choose_unit():
     global enter_height
     global unit_type
     # User measurement unit input
-    unit_type = input(f"\n{enter}\n{si}\n{usc}\n")
+    unit_type = input(f"\n\033[1;32;40m{enter}\n{si}\n{usc}\n")
     # if user typed 1 -> message about choice - and return comment
     if unit_type == "1":
         print(f"\n{name.capitalize()} the units you choosed is SI\n")
@@ -105,7 +107,7 @@ def choose_unit():
         enter_height = "please enter your height in in"
     # if user typed other value -> message about choice - and repeat function
     else:
-        print("Please choose correct value 1 or 2\n")
+        print("\033[1;31;40mPlease choose correct value 1 or 2\n")
         choose_unit()
 
 
@@ -117,10 +119,10 @@ def user_input_weight():
     # variable to use outcome globally in other functions
     global weight
     # User weight input
-    weight = input(f"Hi {name.capitalize()} {enter_weight}:\n")
+    weight = input(f"\033[1;32;40mHi {name.capitalize()} {enter_weight}:\n")
     # if characters is digit -> message to user and repeat this function
     if is_digit(weight) is False:
-        print("\nPlease do not include letter in your weight.")
+        print("\n\033[1;31;40mPlease do not include letter in your weight.")
         user_input_weight()
     # else return weight
     else:
@@ -135,10 +137,10 @@ def user_input_height():
     # Variable to use outcome globally in other functions
     global height
     # User height input
-    height = input(f"\nHi {name.capitalize()} {enter_height}:\n")
+    height = input(f"\n\033[1;32;40mHi {name.capitalize()} {enter_height}:\n")
     # If characters is digit -> message to user and repeat this function
     if is_digit(height) is False:
-        print("\nPlease do not include letter in your height.")
+        print("\n\033[1;31;40mPlease do not include letter in your height.")
         user_input_height()
     # Else return weight
     else:
@@ -209,14 +211,14 @@ def restart_calculator():
     yes = "Press 'y' than 'enter' to continue calculations"
     no = "Press 'n' than 'enter' to quit calculations"
     # User decision y or n input
-    restart = input(f"\n{repeat}\n{yes}\n{no}\n")
+    restart = input(f"\033[1;32;40m\n{repeat}\n{yes}\n{no}\n")
     if restart == 'y':
-        print('\nCalculate again\n')
+        print('\n\033[1;33;40mCalculate again\n')
         main()
     elif restart == 'n':
         exit()
     else:
-        print("\nIncorrect character, please type 'y' or 'n'")
+        print("\n\033[1;31;40mIncorrect character, please type 'y' or 'n'")
         restart_calculator()
 
 
@@ -234,5 +236,5 @@ def main():
     restart_calculator()
 
 
-print("\nWelcome in the BMI Calculator\n")
+print("\n\033[1;34;40mWelcome in the BMI Calculator")
 main()
