@@ -17,10 +17,10 @@ scope:
 
 def is_digit(user_input):
     """
-    Function is checking if value is number
-    return true or false
+    Function is checking if value is a number
+    return boolean True or False
     """
-    # if characters is digit return boolean
+    # if any characters is digit return boolean True else False
     if any(char.isdigit() for char in user_input):
         return True
     else:
@@ -29,10 +29,10 @@ def is_digit(user_input):
 
 def is_letter(user_input):
     """
-    Function is checking if value is number
-    return true or false
+    Function is checking if value is a letter
+    return boolean True or False
     """
-    # if characters is digit return boolean
+    # if any characters is letter -> return boolean True else False
     if any(char.isalpha() for char in user_input):
         return True
     else:
@@ -48,7 +48,7 @@ def user_input_name():
     global name
     # User name input
     name = input('Please enter your name:\n')
-    # if characters is digit message and repeat function
+    # if characters is digit -> message to user and repeat this function
     if is_digit(name) is True:
         print("Please do not include digits in your name.")
         user_input_name()
@@ -65,14 +65,16 @@ def user_input_age():
     # variable to use outcome globally in other functions
     global age
     # User age input
-    age = input(f"Hi {name.capitalize()} please enter your age:\n")
-    # if characters is letter message and repeat function
+    age = input(f"\nHi {name.capitalize()} please enter your age:\n")
+    # if characters is letter -> message to user and repeat this function
     if is_letter(age) is True:
-        print("Please do not include letter in your age.")
+        print("\nPlease do not include letter in your age.")
         user_input_age()
+    # if age is to high over 120 -> message to user and repeat this function
     elif int(age) >= 120:
-        print("Is this a correct age?")
+        print("\nIs this a correct age?")
         user_input_age()
+    # else return age
     else:
         return age
 
@@ -83,21 +85,25 @@ def choose_unit():
     """
     # variable to ensure PEP8 convention pass (amount of characters in line)
     enter = 'Enter unit of measurement by typing a number:\n'
-    si = '1. The International System of Units (SI) cm or kg\n'
+    si = '1. The International System of Units (SI) cm or kg'
     usc = '2. United States Customary Units (USC) in or lbs\n'
     # variables to use outcome globally in other functions
     global enter_weight
     global enter_height
     global unit_type
-    unit_type = input(f"{enter}\n{si}\n{usc}\n")
+    # User measurement unit input
+    unit_type = input(f"\n{enter}\n{si}\n{usc}\n")
+    # if user typed 1 -> message about choice - and return comment
     if unit_type == "1":
-        print(f"{name.capitalize()} the units you choosed is SI\n")
+        print(f"\n{name.capitalize()} the units you choosed is SI\n")
         enter_weight = "please enter your weight in kg"
         enter_height = "please enter your height in cm"
+    # if user typed 2 -> message about choice - and return comment
     elif unit_type == "2":
-        print(f"{name.capitalize()} the units you choosed is USC\n")
+        print(f"\n{name.capitalize()} the units you choosed is USC\n")
         enter_weight = "please enter your weight in lbs"
         enter_height = "please enter your height in in"
+    # if user typed other value -> message about choice - and repeat function
     else:
         print("Please choose correct value 1 or 2\n")
         choose_unit()
@@ -110,11 +116,13 @@ def user_input_weight():
     """
     # variable to use outcome globally in other functions
     global weight
+    # User weight input
     weight = input(f"Hi {name.capitalize()} {enter_weight}:\n")
-
+    # if characters is digit -> message to user and repeat this function
     if is_digit(weight) is False:
-        print("Please do not include letter in your weight.\n")
+        print("\nPlease do not include letter in your weight.")
         user_input_weight()
+    # else return weight
     else:
         return weight
 
@@ -124,25 +132,30 @@ def user_input_height():
     Function colecting a user height
     and checking value if is digit using is_digit() function
     """
-    # variable to use outcome globally in other functions
+    # Variable to use outcome globally in other functions
     global height
-    height = input(f"Hi {name.capitalize()} {enter_height}:\n")
-
+    # User height input
+    height = input(f"\nHi {name.capitalize()} {enter_height}:\n")
+    # If characters is digit -> message to user and repeat this function
     if is_digit(height) is False:
-        print("Please do not include letter in your height.\n")
+        print("\nPlease do not include letter in your height.")
         user_input_height()
+    # Else return weight
     else:
         return height
 
 
 def bmi_calculator():
+    # Variable to use outcome globally in other functions
     global bmi
+    # Calculation if unit type SI, float to allow 2 digits after comma
     if unit_type == "1":
         bmi = round(float(weight)/(float(height)/100)**2, 2)
-        print(f"{name.capitalize()} your BMI is {bmi} kg/m^2\n")
+        print(f"\n{name.capitalize()} your BMI is {bmi}")
+    # Calculation if unit type USC, float to allow 2 digits after comma
     else:
         bmi = round(float(weight)/(float(height)**2)*703, 2)
-        print(f"{name.capitalize()} your BMI is {bmi} lbs/in^2\n")
+        print(f"\n{name.capitalize()} your BMI is {bmi}")
 
 
 def bmi_categories():
@@ -151,38 +164,40 @@ def bmi_categories():
     """
     # variable to ensure PEP8 convention pass (amount of characters in line)
     your_bmi = "your BMI Category is "
+    # result to user in age below 18
     if int(age) < 18:
         """
         If age of user is below 18
         """
         if float(bmi) <= 18.5:
-            print(f"{name.capitalize()} {your_bmi}underweight\n")
+            print(f"{name.capitalize()} {your_bmi}underweight")
         elif float(bmi) >= 18.5 and float(bmi) <= 24.9:
-            print(f"{name.capitalize()} {your_bmi}normal\n")
+            print(f"{name.capitalize()} {your_bmi}normal")
         elif float(bmi) >= 25 and float(bmi) <= 29.9:
-            print(f"{name.capitalize()} {your_bmi}overweight\n")
+            print(f"{name.capitalize()} {your_bmi}overweight")
         else:
-            print(f"{name.capitalize()} {your_bmi}obesity\n")
+            print(f"{name.capitalize()} {your_bmi}obesity")
+    # Else result to user in age is over 18
     else:
         """
-        If age of user is over 18 - adults
+        If age of user is equal or over 18 - adults
         """
         if float(bmi) <= 16:
-            print(f"{name.capitalize()} {your_bmi}Severe Thinness\n")
+            print(f"{name.capitalize()} {your_bmi}Severe Thinness")
         elif float(bmi) >= 16 and float(bmi) <= 17:
-            print(f"{name.capitalize()} {your_bmi}Moderate Thinness\n")
+            print(f"{name.capitalize()} {your_bmi}Moderate Thinness")
         elif float(bmi) >= 17 and float(bmi) <= 18.5:
-            print(f"{name.capitalize()} {your_bmi}Mild Thinness\n")
+            print(f"{name.capitalize()} {your_bmi}Mild Thinness")
         elif float(bmi) >= 18.5 and float(bmi) <= 25:
-            print(f"{name.capitalize()} {your_bmi}Normal\n")
+            print(f"{name.capitalize()} {your_bmi}Normal")
         elif float(bmi) >= 25 and float(bmi) <= 30:
-            print(f"{name.capitalize()} {your_bmi}Overweight\n")
+            print(f"{name.capitalize()} {your_bmi}Overweight")
         elif float(bmi) >= 30 and float(bmi) <= 35:
-            print(f"{name.capitalize()} {your_bmi}Obese Class I\n")
+            print(f"{name.capitalize()} {your_bmi}Obese Class I")
         elif float(bmi) >= 35 and float(bmi) <= 40:
-            print(f"{name.capitalize()} {your_bmi}Obese Class II\n")
+            print(f"{name.capitalize()} {your_bmi}Obese Class II")
         else:
-            print(f"{name.capitalize()} {your_bmi}Obese Class III\n")
+            print(f"{name.capitalize()} {your_bmi}Obese Class III")
 
 
 def restart_calculator():
@@ -193,14 +208,15 @@ def restart_calculator():
     repeat = "Do you want to repeat calculations?"
     yes = "Press 'y' than 'enter' to continue calculations"
     no = "Press 'n' than 'enter' to quit calculations"
-    restart = input(f"{repeat}\n{yes}\n{no}\n")
+    # User decision y or n input
+    restart = input(f"\n{repeat}\n{yes}\n{no}\n")
     if restart == 'y':
-        print('Calculate again')
+        print('\nCalculate again\n')
         main()
     elif restart == 'n':
         exit()
     else:
-        print("Incorrect character, please type 'y' or 'n'\n")
+        print("\nIncorrect character, please type 'y' or 'n'")
         restart_calculator()
 
 
@@ -218,5 +234,5 @@ def main():
     restart_calculator()
 
 
-print("Welcome in the BMI Calculator\n")
+print("\nWelcome in the BMI Calculator\n")
 main()
