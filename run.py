@@ -247,7 +247,7 @@ print("#####   ##    ##  ##\n")
 print("********************")
 print("\n\033[1;34;40mBody Mass Index for all")
 print("\n\033[1;35;40mUse this calculator to check your body mass index (BMI)")
-print("Type your body details age, weight & height) than program wil")
+print("Type your body details age, weight & height than program will")
 print("calculate your BMI index based on details provided")
 
 
