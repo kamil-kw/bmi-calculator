@@ -41,7 +41,7 @@ def is_letter(user_input):
 
 def user_input_name():
     """
-    Function colecting a user name and use it globally
+    Function collecting a user name and use it globally
     and checking value if is string using is_digit() function
     """
     # variable to use outcome globally in other functions
@@ -59,7 +59,7 @@ def user_input_name():
 
 def user_input_age():
     """
-    Function colecting a user age and checks if value is
+    Function collecting a user age and checks if value is
     digit using is_digit() function
     """
     # variable to use outcome globally in other functions
@@ -83,7 +83,8 @@ def user_input_age():
 
 def choose_unit():
     """
-    Function will collect information about unit of measurment standard
+    Function will collect information about user preferences
+    about unit of measurement
     """
     # variable to ensure PEP8 convention pass (amount of characters in line)
     enter = 'Enter unit of measurement by typing a number:\n'
@@ -97,12 +98,12 @@ def choose_unit():
     unit_type = input(f"\n\033[1;32;40m{enter}\n{si}\n{usc}\n")
     # if user typed 1 -> message about choice - and return comment
     if unit_type == "1":
-        print(f"\n{name.capitalize()} the units you choosed is SI\n")
+        print(f"\n{name.capitalize()} the units you have choosen is SI\n")
         enter_weight = "please enter your weight in kg"
         enter_height = "please enter your height in cm"
     # if user typed 2 -> message about choice - and return comment
     elif unit_type == "2":
-        print(f"\n{name.capitalize()} the units you choosed is USC\n")
+        print(f"\n{name.capitalize()} the units you have choosen is USC\n")
         enter_weight = "please enter your weight in lbs"
         enter_height = "please enter your height in in"
     # if user typed other value -> message about choice - and repeat function
@@ -113,8 +114,8 @@ def choose_unit():
 
 def user_input_weight():
     """
-    Function colecting a user weight
-    and checking vaule if is digit using is_digit()
+    Function collecting a user weight
+    and checking value if is digit using is_digit()
     """
     # variable to use outcome globally in other functions
     global weight
@@ -131,7 +132,7 @@ def user_input_weight():
 
 def user_input_height():
     """
-    Function colecting a user height
+    Function collecting a user height
     and checking value if is digit using is_digit() function
     """
     # Variable to use outcome globally in other functions
@@ -204,7 +205,7 @@ def bmi_categories():
 
 def restart_calculator():
     """
-    This function will recive user input y - continue or n - exit
+    This function will receive user input y - continue or n - exit
     """
     # variables to ensure PEP8 convention pass (amount of characters in line)
     repeat = "Do you want to repeat calculations?"
@@ -236,5 +237,18 @@ def main():
     restart_calculator()
 
 
-print("\n\033[1;34;40mWelcome in the BMI Calculator")
+print("\n\033[1;34;40mWelcome in the BMI Calculator\n")
+print("********************\n")
+print("#####   ##    ##  ##")
+print("##  ##  ###  ###  ##")
+print("######  ## ## ##  ##")
+print("##  ##  ##    ##  ##")
+print("#####   ##    ##  ##\n")
+print("********************")
+print("\n\033[1;34;40mBody Mass Index for all")
+print("\n\033[1;35;40mUse this calculator to check your body mass index (BMI)")
+print("Type your body details age, weight & height) than program wil")
+print("calculate your BMI index based on details provided")
+
+
 main()
