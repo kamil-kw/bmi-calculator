@@ -1,20 +1,3 @@
-"""
-scope:
-- Welcome message
-- Type your name
-- Hi <name> 
--- BMI tool
-- Give your input
-    - Gender
-    - Age
-    - Height
-    - Weight
-- calulate
-- Print result
-- do it again?
-"""
-
-
 def is_digit(user_input):
     """
     Function is checking if value is a number
@@ -217,6 +200,7 @@ def restart_calculator():
         print('\n\033[1;33;40mCalculate again\n')
         main()
     elif restart == 'n':
+        print('\n\033[1;33;40mSee you next time')
         exit()
     else:
         print("\n\033[1;31;40mIncorrect character, please type 'y' or 'n'")
@@ -237,14 +221,15 @@ def main():
     restart_calculator()
 
 
+print("\033[1;30;40m*********************************************************")
 print("\n\033[1;34;40mWelcome in the BMI Calculator\n")
-print("********************\n")
-print("#####   ##    ##  ##")
-print("##  ##  ###  ###  ##")
-print("######  ## ## ##  ##")
-print("##  ##  ##    ##  ##")
-print("#####   ##    ##  ##\n")
-print("********************")
+print("\033[1;31;40m*******************************************\n")
+print("\033[1;31;40m  #       #####    ##    ##   ##        #")
+print("\033[1;32;40m #        ##  ##   ###  ###   ##         #")
+print("\033[1;34;40m#         ######   ## ## ##   ##          #")
+print("\033[1;35;40m #        ##  ##   ##    ##   ##         #")
+print("\033[1;33;40m  #       #####    ##    ##   ##        #\n")
+print("*******************************************")
 print("\n\033[1;34;40mBody Mass Index for all")
 print("\n\033[1;35;40mUse this calculator to check your body mass index (BMI)")
 print("Type your body details age, weight & height than program will")
