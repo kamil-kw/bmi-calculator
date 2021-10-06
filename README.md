@@ -38,7 +38,7 @@ Happy coding!
 
 Welcome to my third Full Stack Course project. This is a Body Mass Index (BMI) calculator.
 
-In this project the goal was to create an useful program while using python language.As most of us are concerned about our own health, I decided to build a user-friendly BMI (body mass index) calculator.
+In this project the goal was to create an useful program while using python language. As most of us are concerned about our own health, I decided to build a user-friendly BMI (body mass index) calculator.
 
 Hope you will find intresting to use this tool.
 
@@ -140,33 +140,33 @@ BMI is widely known method, where you need to place details like:
 
 Based on this values program will show your weight health values based on age under or over 18 as per list below:
 
-* **Under 18:**
+## Age Under 18:
 
-Underweight         < 18.5
-Normal              18.5 - 24.9
-Overweight          25 -29.9
-Obesity             > 29.9
+* Underweight         < 18.5
+* Normal              18.5 - 24.9
+* Overweight          25 -29.9
+* Obesity             > 29.9
 
-* **Over 18:**
+## Age Over 18:
 
-Severe Thinness	    < 16
-Moderate Thinness	16 - 17
-Mild Thinness	    17 - 18.5
-Normal	            18.5 - 25
-Overweight	        25 - 30
-Obese Class I	    30 - 35
-Obese Class II	    35 - 40
-Obese Class III	    > 40
+* Severe Thinness	    < 16
+* Moderate Thinness	16 - 17
+* Mild Thinness	    17 - 18.5
+* Normal	            18.5 - 25
+* Overweight	        25 - 30
+* Obese Class I	    30 - 35
+* Obese Class II	    35 - 40
+* Obese Class III	    > 40
 
 Calculations are perform using two types of measurement units:
 
 * **SI** known as Metric measured in meters and kilograms, as per function below:
 
-**BMI = mass(kg)/height^2(m^2)**
+    **BMI = mass(kg)/height^2(m^2)**
 
 * **USC** known as United States Customary Units measured in inches and pounds, as per function below:
 
-**BMI = [mass(lb)/height^2(in^2)]x703**
+    **BMI = [mass(lb)/height^2(in^2)]x703**
 
 [Back to Table Of Content](#tableOfContents)
 <a name="skeleton"></a>
@@ -226,11 +226,11 @@ As a presentation level and to provide a clear understanding for user as well as
 <a name="testing"></a>
 # 4. Testing
 
-## **PEP8**
+### **PEP8**
 
 * Test using PEP8 validator to avoid conventions errors, pass in first approach
 
-## Manual testing
+### **Manual testing**
 
 * Incorrect type of data provided into the terminal to ensure triggering correct messages
 * Testing multiple scenarios to ensure correct color will be displayed to terminal
