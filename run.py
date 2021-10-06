@@ -105,7 +105,7 @@ def user_input_weight():
     # User weight input
     weight = input(f"\033[1;32;10mHi {name.capitalize()} {enter_weight}:\n")
     # if characters is digit -> message to user and repeat this function
-    if is_digit(weight) is False:
+    if is_letter(weight) is True:
         print("\n\033[1;31;10mPlease do not include letter in your weight.")
         user_input_weight()
     # else return weight
@@ -123,7 +123,7 @@ def user_input_height():
     # User height input
     height = input(f"\n\033[1;32;10mHi {name.capitalize()} {enter_height}:\n")
     # If characters is digit -> message to user and repeat this function
-    if is_digit(height) is False:
+    if is_letter(height) is True:
         print("\n\033[1;31;10mPlease do not include letter in your height.")
         user_input_height()
     # Else return weight
