@@ -103,7 +103,7 @@ def user_input_weight():
     # variable to use outcome globally in other functions
     global weight
     # User weight input
-    weight = input(f"\033[1;32;10mHi {name.capitalize()} {enter_weight}:\n")
+    weight = input(f"\n\033[1;32;10mHi {name.capitalize()} {enter_weight}:\n")
     # if characters is digit -> message to user and repeat this function
     if is_letter(weight) is True:
         print("\n\033[1;31;10mPlease do not include letter in your weight.")

@@ -1,4 +1,4 @@
-![Hero image]()
+![Hero image](images_readme/hero_image.PNG)
 # BMI Calculator 🖩 in 🐍 Python
 
 ## [See Live web](https://bmi-calculator-pp3.herokuapp.com/)
@@ -206,6 +206,79 @@ As a presentation level and to provide a clear understanding for user as well as
 * While coding, I did perform test through the terminal each time once new function was implemented, also used a VS Code to test function separately
 * Tested final project on Heroku
 
+### **Function tests**
+
+## **Name**
+
+**Name Digit Test**
+
+![Name Digit Test](images_readme/name_digit_test.PNG)
+
+**Name Pass Test**
+
+![Name Pass](images_readme/name_test.PNG)
+
+## **Age**
+
+**Age Letter Test**
+
+![Age Letter Test](images_readme/age_letter_test.PNG)
+
+**Age Pass Test**
+
+![Age Pass Test](images_readme/age_test_pass.PNG)
+
+## **Unit**
+
+**Unit Wrong Value Test**
+
+![Unit Wrong Value Test](images_readme/unit_wrong_test.PNG)
+
+**Unit SI Pass Test**
+
+![Unit SI Pass Test](images_readme/unit_si_pass.PNG)
+
+**Unit USC Pass Test**
+
+![Unit USC Pass Test]()
+
+## **Weight**
+
+**Weight SI Letter Test**
+
+![Weight SI Letter Test](images_readme/weight_si_wrong.PNG)
+
+**Weight SI Pass Test**
+
+![Weight SI Pass Test](images_readme/weight_si_pass.PNG)
+
+**Weight USC Letter Test**
+
+![Weight USC Letter Test](/images_readme/weight_lbs_pass.PNG)
+
+**Weight USC Pass Test**
+
+![Weight USC Pass Test](images_readme/weight_lbs_wrong.PNG)
+
+## **Height**
+
+**Height SI Letter Test**
+
+![Height SI Letter Test](images_readme/height_si_wrong.PNG)
+
+**Height SI Pass Test**
+
+![Height SI Pass Test](images_readme/height_si_pass.PNG)
+
+**Height USC Letter Test**
+
+![Height USC Letter Test](images_readme/height_lbs_wrong.PNG)
+
+**Height USC Pass Test**
+
+![Height USC Pass Test](images_readme/height_lbs_pass.PNG)
+
+
 [Back to Table Of Content](#tableOfContents)
 
 <a name="development"></a>
@@ -217,6 +290,8 @@ Page was builded according to a diagram defined in the beginning of the project.
 # 7. End Product
 
 ## **End Product screens**
+![Hero image](images_readme/hero_image.PNG)
+
 
 <a name="knownBugs"></a>
 # 8. Known bugs
