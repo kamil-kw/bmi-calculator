@@ -230,9 +230,9 @@ print("\033[1;34;10m#         ######   ## ## ##   ##          #")
 print("\033[1;35;10m #        ##  ##   ##    ##   ##         #")
 print("\033[1;33;10m  #       #####    ##    ##   ##        #\n")
 print("*******************************************")
-print("\n\033[1;34;10mBody Mass Index for all")
+print("\n\033[1;34;10mBody Mass Index for Everyone")
 print("\n\033[1;35;10mUse this calculator to check your body mass index (BMI)")
-print("Type your body details age, weight & height than program will")
+print("Type your age and body details weight & height than program will")
 print("calculate your BMI index based on details provided")
 
 
