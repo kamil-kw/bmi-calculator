@@ -199,6 +199,8 @@ As a presentation level and to provide a clear understanding for user as well as
 
 * Test using PEP8 validator to avoid conventions errors, pass in first approach
 
+![PEP8](images_readme/pep8_result.PNG)
+
 ### **Manual testing**
 
 * Incorrect type of data provided into the terminal to ensure triggering correct messages
@@ -240,7 +242,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 **Unit USC Pass Test**
 
-![Unit USC Pass Test]()
+![Unit USC Pass Test](images_readme/unit_usc_pass.PNG)
 
 ## **Weight**
 
@@ -277,6 +279,27 @@ As a presentation level and to provide a clear understanding for user as well as
 **Height USC Pass Test**
 
 ![Height USC Pass Test](images_readme/height_lbs_pass.PNG)
+
+## **Result**
+
+**Result**
+
+![Result](images_readme/result.PNG)
+
+## **Exit or Continue**
+
+**Exit wrong Value Test**
+
+![Exit wrong Value Test](images_readme/exit_calc_wrong.PNG)
+
+**Continue?**
+
+![Continue?](images_readme/exit_calc_yes.PNG)
+
+**Exit?**
+
+![Continue?](images_readme/exit_calc_no.PNG)
+
 
 
 [Back to Table Of Content](#tableOfContents)
