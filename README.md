@@ -207,111 +207,110 @@ As a presentation level and to provide a clear understanding for user as well as
 
 # 4. Testing
 
-### **PEP8**
+## **PEP8**
 
 * Test using PEP8 validator to avoid conventions errors, pass in first approach
 
 ![PEP8](images_readme/pep8_result.PNG)
 
-### **Manual testing**
+## **Manual testing**
 
 * Incorrect type of data provided into the terminal to ensure triggering correct messages
 * Testing multiple scenarios to ensure correct color will be displayed to terminal
 * While coding, I did perform test through the terminal each time once new function was implemented, also used a VS Code to test function separately
 * Tested final project on Heroku
 
-### **Function tests**
+## **Function tests**
 
-## **Name**
+### **Name**
 
-**Name Digit Test**
+***Name Digit Test***
 
 ![Name Digit Test](images_readme/name_digit_test.PNG)
 
-**Name Pass Test**
+***Name Pass Test***
 
 ![Name Pass](images_readme/name_test.PNG)
 
-## **Age**
+### **Age**
 
-**Age Letter Test**
+***Age Letter Test***
 
 ![Age Letter Test](images_readme/age_letter_test.PNG)
 
-**Age Pass Test**
+***Age Pass Test***
 
 ![Age Pass Test](images_readme/age_test_pass.PNG)
 
-## **Unit**
+### **Unit**
 
-**Unit Wrong Value Test**
+***Unit Wrong Value Test***
 
 ![Unit Wrong Value Test](images_readme/unit_wrong_test.PNG)
 
-**Unit SI Pass Test**
+***Unit SI Pass Test***
 
 ![Unit SI Pass Test](images_readme/unit_si_pass.PNG)
 
-**Unit USC Pass Test**
+***Unit USC Pass Test***
 
 ![Unit USC Pass Test](images_readme/unit_usc_pass.PNG)
 
-## **Weight**
+### **Weight**
 
-**Weight SI Letter Test**
+***Weight SI Letter Test***
 
 ![Weight SI Letter Test](images_readme/weight_si_wrong.PNG)
 
-**Weight SI Pass Test**
+***Weight SI Pass Test***
 
 ![Weight SI Pass Test](images_readme/weight_si_pass.PNG)
 
-**Weight USC Letter Test**
+***Weight USC Letter Test***
 
 ![Weight USC Letter Test](/images_readme/weight_lbs_pass.PNG)
 
-**Weight USC Pass Test**
+***Weight USC Pass Test***
 
 ![Weight USC Pass Test](images_readme/weight_lbs_wrong.PNG)
 
-## **Height**
+### **Height**
 
-**Height SI Letter Test**
+***Height SI Letter Test***
 
 ![Height SI Letter Test](images_readme/height_si_wrong.PNG)
 
-**Height SI Pass Test**
+***Height SI Pass Test***
 
 ![Height SI Pass Test](images_readme/height_si_pass.PNG)
 
-**Height USC Letter Test**
+***Height USC Letter Test***
 
 ![Height USC Letter Test](images_readme/height_lbs_wrong.PNG)
 
-**Height USC Pass Test**
+***Height USC Pass Test***
 
-![Height USC Pass Test](images_readme/height_lbs_pass.PNG)
+![Height USC Pass Test](images_readme/height_lbs_pass.png)
 
-## **Result**
+### **Result**
 
-**Result**
+***Result***
 
 ![Result](images_readme/result.PNG)
 
-## **Exit or Continue**
+### **Exit or Continue**
 
-**Exit wrong Value Test**
+***Exit wrong Value Test***
 
 ![Exit wrong Value Test](images_readme/exit_calc_wrong.PNG)
 
-**Continue?**
+***Continue?***
 
 ![Continue?](images_readme/exit_calc_yes.PNG)
 
-**Exit?**
+***Exit?***
 
 ![Continue?](images_readme/exit_calc_no.PNG)
-
 
 
 [Back to Table Of Content](#tableOfContents)
@@ -320,20 +319,40 @@ As a presentation level and to provide a clear understanding for user as well as
 
 # 5. Development
 
-Page was builded according to a diagram defined in the beginning of the project. Each function works correctly. In the last stage of this process the colors and visual features were added to improve overall UX.
+Page was built based on a diagram defined in the beginning of the project.
+The first feature created was 'type your name' and 'main function' to allow all functions to run. Type your name gets a validation using a for loop, so each single character is tested to avoid digits input. Keeping in mind a good practice principle that *if any function can be built separately, better to do it*, I decided then to separate test for letter and digit as two functions, which can be reused where user input needs validation. User name also will be used as a part of personalised messages, and at this moment the user age function was built. Next process development was a function to choose units of measurement (SI - metric and USC - United States Customary), as this will increase the range of users. Unit of measurement is defined as a next stage of development, this is used to provide correct calculation, as per value provided by the user. Having all those details and scores in hand I was able to move to the next stage, where according to age and score the specific outcome appears in the program and will be presented to the user.
+The Last stage of the function building process was a *quite or continue* function where users can decide to recalculate value or end the process.
+Each function works correctly and was tested multiple times with multiple scenarios - [See testing photos](#testing). 
+As a final implementation the colors as visual features were added to improve overall UX, ensuring that users see clearly what is happening.
 
-<a name
-see test picture
+# 6. Deployment
 
-# 5. Deployment
+To deploy my final project to the cloud I used Heroku. To do this I had to:
 
+1. Push the latest code to GitHub.
+2. Go to Heroku
+3. Select new in the top right corner.
+4. Create new app.
+5. Enter the app name and select Europe as the region.
+6. Connect to GitHub.
+7. Search for repo-name.
+8. Select connect to the relevant repo you want to deploy.
+9. Select the settings tab.
+10. Add buildpack
+11. Select Python, then save changes.
+12. Select Nodejs, then save changes.
+13. Make sure Heroku/Python is at the top of the list, followed by Heroku/Nodejs
+14. Navigate to the deploy tab
+15. Scroll down to Manual Deploy and select deploy branch.
 
 
 # 7. End Product
 
 ## **End Product screens**
+
 ![Hero image](images_readme/hero_image.PNG)
 
+[See testing photos](#testing) for more end product photo.
 
 <a name="knownBugs"></a>
 
@@ -347,6 +366,10 @@ During development I did face few bugs:
 * Calculation wasn't receiving float numbers - fixed by specifying the numbers from input to float in calculation
 * Breaching PEP8 conventions by typing too long lines (over 80 characters) - fixed by adding variables with text included in as string
 
+## **Remaining Bugs**
+
+No bugs remaining
+
 ***All known bugs were corrected before deployment***
 
 [Back to Table Of Content](#tableOfContents)
@@ -355,6 +378,10 @@ During development I did face few bugs:
 
 # 9. Credits
 
-## **Special thanks to**
+Heroku deployment instructions from Code Institute
 
-### **@Marcel(Mentor) Mulder** for constructive feedback and amazing tips
+GitHub Python Template [Code Institute](https://codeinstitute.net/)
+
+### **Special thanks to**
+
+**@Marcel(Mentor) Mulder** for constructive feedback and amazing tips
