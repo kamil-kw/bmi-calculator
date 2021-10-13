@@ -69,8 +69,6 @@ The reason for this web page is to show my skills to potential recruiters and al
 
 The project has been built by using Python 🐍. 
 
-[Back to Table Of Content](#tableOfContents)
-
 <a name="userTarget"></a>
 
 ## User Target
@@ -325,6 +323,8 @@ The Last stage of the function building process was a *quite or continue* functi
 Each function works correctly and was tested multiple times with multiple scenarios - [See testing photos](#testing). 
 As a final implementation the colors as visual features were added to improve overall UX, ensuring that users see clearly what is happening.
 
+[Back to Table Of Content](#tableOfContents)
+
 <a name="deployment"></a>
 
 # 6. Deployment
@@ -347,6 +347,8 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 14. Navigate to the deploy tab
 15. Scroll down to Manual Deploy and select deploy branch.
 
+[Back to Table Of Content](#tableOfContents)
+
 <a name="endProduct"></a>
 
 # 7. End Product
@@ -356,6 +358,8 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 ![Hero image](images_readme/hero_image.PNG)
 
 [See testing photos](#testing) for more end product photo.
+
+[Back to Table Of Content](#tableOfContents)
 
 <a name="knownBugs"></a>
 
