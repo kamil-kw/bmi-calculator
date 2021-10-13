@@ -18,8 +18,7 @@ def is_letter(user_input):
     # if any characters is letter -> return boolean True else False
     if any(char.isalpha() for char in user_input):
         return True
-    else:
-        return False
+    return False
 
 
 def user_input_name():

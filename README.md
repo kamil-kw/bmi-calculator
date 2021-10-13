@@ -11,6 +11,8 @@ In this project the goal was to create an useful program while using 
 
 Hope you will find intresting to use this tool.
 
+<a name="tableOfContents"></a>
+
 # Table of Contents
 
 [1. **UX**](#ux)
@@ -44,6 +46,7 @@ Hope you will find intresting to use this tool.
 [Back to Table Of Content](#tableOfContents)
 
 <a name="ux"></a>
+
 # 1. UX
 
 As a next step on my path of becoming a software developer from zero to hero 😊, I'm presenting a BMI Calculator.
@@ -55,9 +58,11 @@ As part of my portfolio collection, which can be shown to my potential future em
 [Back to Table Of Content](#tableOfContents)
 
 <a name="strategy"></a>
+
 # 1.1 Strategy
 
 <a name="projectGoals"></a>
+
 ## Project Goals
 
 The reason for this web page is to show my skills to potential recruiters and all who want to cooperate with me in the future in projects.
@@ -67,12 +72,12 @@ The project has been built by using Python 🐍. 
 [Back to Table Of Content](#tableOfContents)
 
 <a name="userTarget"></a>
+
 ## User Target
 
-[Back to Table Of Content](#tableOfContents)
-
 <a name="firstTime"></a>
-## First time visitors
+
+### First time visitors
 
 * 1st time Visitors who wants to see my portfolio products;
 * 1st time Visitors who wants to use BMI calculator;
@@ -80,7 +85,8 @@ The project has been built by using Python 🐍. 
 [Back to Table Of Content](#tableOfContents)
 
 <a name="returning"></a>
-## Returning visitors
+
+### Returning visitors
 
 * Visitors who would like to use calculation again
 
@@ -97,6 +103,7 @@ The project has been built by using Python 🐍. 
 [Back to Table Of Content](#tableOfContents)
 
 <a name="structure"></a>
+
 # 1.2. Structure
 
 Type your name so massages will be personalised
@@ -139,6 +146,7 @@ Calculations are perform using two types of measurement units:
 
 [Back to Table Of Content](#tableOfContents)
 <a name="skeleton"></a>
+
 # 1.3. Skeleton
 
 Logic of this calculator is describe in the diagram below:
@@ -146,7 +154,9 @@ Logic of this calculator is describe in the diagram below:
 ![flow](images_readme/flow.png)
 
 [Back to Table Of Content](#tableOfContents)
+
 <a name="surface"></a>
+
 # 1.4. Surface
 
 As a presentation level and to provide a clear understanding for user as well as what is currently expected form user I did choose to use ANSI gamma colors for:
@@ -171,6 +181,7 @@ As a presentation level and to provide a clear understanding for user as well as
 [Back to Table Of Content](#tableOfContents)
 
 <a name="technologies"></a>
+
 # 3. Technologies Used
 
 ### **During creation journey I did use:**
@@ -193,6 +204,7 @@ As a presentation level and to provide a clear understanding for user as well as
 [Back to Table Of Content](#tableOfContents)
 
 <a name="testing"></a>
+
 # 4. Testing
 
 ### **PEP8**
@@ -305,11 +317,18 @@ As a presentation level and to provide a clear understanding for user as well as
 [Back to Table Of Content](#tableOfContents)
 
 <a name="development"></a>
+
 # 5. Development
 
 Page was builded according to a diagram defined in the beginning of the project. Each function works correctly. In the last stage of this process the colors and visual features were added to improve overall UX.
 
-<a name="endProduct"></a>
+<a name
+see test picture
+
+# 5. Deployment
+
+
+
 # 7. End Product
 
 ## **End Product screens**
@@ -317,6 +336,7 @@ Page was builded according to a diagram defined in the beginning of the project.
 
 
 <a name="knownBugs"></a>
+
 # 8. Known bugs
 
 ## **Fixed bugs**
@@ -332,6 +352,7 @@ During development I did face few bugs:
 [Back to Table Of Content](#tableOfContents)
 
 <a name="credits"></a>
+
 # 9. Credits
 
 ## **Special thanks to**
