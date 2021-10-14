@@ -381,7 +381,7 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 ![Hero image](images_readme/hero_image.PNG)
 
-[See testing photos](#testing) for more end product photo.
+[See testing photos](#functionTest) for more end product photo.
 
 [Back to Table Of Content](#tableOfContents)
 
