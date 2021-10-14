@@ -24,6 +24,10 @@ Hope you will find intresting to use this tool.
     * [User expectations](#userExpectations)
 
 * [**1.2. Structure**](#structure)
+    * [User input](#userInput)
+    * [Calculation outcome](#calculationOutcome)
+    * [Calculation method](#calculationMethod)
+
 * [**1.3. Skeleton**](#skeleton)
 * [**1.4. Surface**](#surface)
 
@@ -32,6 +36,9 @@ Hope you will find intresting to use this tool.
 [3. **Technologies Used**](#technologies)
 
 [4. **Testing**](#testing)
+* [PEP8](#pep)
+* [Manual Testing](#manualTesting)
+* [Function tests](#functionTest)
 
 [5. **Development Cycle**](#development)
 
@@ -40,6 +47,8 @@ Hope you will find intresting to use this tool.
 [7. **End Product**](#endProduct)
 
 [8. **Known Bugs**](#knownBugs)
+* [Fixed bugs](#fixedBugs)
+* [Remaining Bugs](#remainBugs)
 
 [9. **Credit**](#credits)
 
@@ -80,15 +89,11 @@ The project has been built by using Python 🐍. 
 * 1st time Visitors who wants to see my portfolio products;
 * 1st time Visitors who wants to use BMI calculator;
 
-[Back to Table Of Content](#tableOfContents)
-
 <a name="returning"></a>
 
 ### Returning visitors
 
 * Visitors who would like to use calculation again
-
-[Back to Table Of Content](#tableOfContents)
 
 <a name="userExpectations"></a>
 
@@ -104,7 +109,12 @@ The project has been built by using Python 🐍. 
 
 # 1.2. Structure
 
-Type your name so massages will be personalised
+<a name="userInput"></a>
+
+## User input
+
+* **Name** which will be used to personalised messages
+* **Unit of measurement** to proceed calculation as per norm, 
 
 BMI is widely known method, where you need to place details like:
 
@@ -112,25 +122,31 @@ BMI is widely known method, where you need to place details like:
 * **Weight** of user
 * **Height** of user 
 
+<a name="calculationOutcome"></a>
+
+## Calculation outcome
+
 Based on this values program will show your weight health values based on age under or over 18 as per list below:
 
-## Age Under 18:
+### Age Under 18:
 
 * Underweight         < 18.5
 * Normal              18.5 - 24.9
 * Overweight          25 -29.9
 * Obesity             > 29.9
 
-## Age Over 18:
+### Age Over 18:
 
 * Severe Thinness	    < 16
-* Moderate Thinness	16 - 17
-* Mild Thinness	    17 - 18.5
+* Moderate Thinness	    16 - 17
+* Mild Thinness	        17 - 18.5
 * Normal	            18.5 - 25
 * Overweight	        25 - 30
-* Obese Class I	    30 - 35
+* Obese Class I	        30 - 35
 * Obese Class II	    35 - 40
 * Obese Class III	    > 40
+
+## Calculation method
 
 Calculations are perform using two types of measurement units:
 
@@ -143,6 +159,7 @@ Calculations are perform using two types of measurement units:
     **BMI = [mass(lb)/height^2(in^2)]x703**
 
 [Back to Table Of Content](#tableOfContents)
+
 <a name="skeleton"></a>
 
 # 1.3. Skeleton
@@ -161,14 +178,15 @@ As a presentation level and to provide a clear understanding for user as well as
 
 * **Title** in Bright Blue color (\033[1;34;40m)
 * **BMI logo** in multiple colors used in program
-* **Explanation - general program color** in Bright Magenta color (\033[1;35;40m)
-* **Questions - User Input Request** in Bright Green color (\033[1;32;40m)
+* **Explanation** in Bright Magenta color (\033[1;35;40m)
+* **User Input Request** in Bright Green color (\033[1;32;40m)
 * **Incorrect data input** in Bright Red color (\033[1;31;40m)
 * **End process message** in Yellow color (\033[1;33;40m)
 
 [Back to Table Of Content](#tableOfContents)
 
 <a name="features"></a>
+
 # 2. Features
 
 * Describe your weight health
@@ -205,11 +223,15 @@ As a presentation level and to provide a clear understanding for user as well as
 
 # 4. Testing
 
+<a name="pep"></a>
+
 ## **PEP8**
 
 * Test using PEP8 validator to avoid conventions errors, pass in first approach
 
 ![PEP8](images_readme/pep8_result.PNG)
+
+<a name="manualTesting"></a>
 
 ## **Manual testing**
 
@@ -217,6 +239,8 @@ As a presentation level and to provide a clear understanding for user as well as
 * Testing multiple scenarios to ensure correct color will be displayed to terminal
 * While coding, I did perform test through the terminal each time once new function was implemented, also used a VS Code to test function separately
 * Tested final project on Heroku
+
+<a name="functionTest"></a>
 
 ## **Function tests**
 
@@ -315,7 +339,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 <a name="development"></a>
 
-# 5. Development
+# 5. Development Cycle
 
 Page was built based on a diagram defined in the beginning of the project.
 The first feature created was 'type your name' and 'main function' to allow all functions to run. Type your name gets a validation using a for loop, so each single character is tested to avoid digits input. Keeping in mind a good practice principle that *if any function can be built separately, better to do it*, I decided then to separate test for letter and digit as two functions, which can be reused where user input needs validation. User name also will be used as a part of personalised messages, and at this moment the user age function was built. Next process development was a function to choose units of measurement (SI - metric and USC - United States Customary), as this will increase the range of users. Unit of measurement is defined as a next stage of development, this is used to provide correct calculation, as per value provided by the user. Having all those details and scores in hand I was able to move to the next stage, where according to age and score the specific outcome appears in the program and will be presented to the user.
@@ -365,6 +389,8 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 # 8. Known bugs
 
+<a name="fixedBugs"></a>
+
 ## **Fixed bugs**
 
 During development I did face few bugs:
@@ -372,6 +398,8 @@ During development I did face few bugs:
 * Transfering results between functions - fixed by setting return value to global scope
 * Calculation wasn't receiving float numbers - fixed by specifying the numbers from input to float in calculation
 * Breaching PEP8 conventions by typing too long lines (over 80 characters) - fixed by adding variables with text included in as string
+
+<a name="remainBugs"></a>
 
 ## **Remaining Bugs**
 
