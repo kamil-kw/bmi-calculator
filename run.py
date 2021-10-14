@@ -6,8 +6,7 @@ def is_digit(user_input):
     # if any characters is digit return boolean True else False
     if any(char.isdigit() for char in user_input):
         return True
-    else:
-        return False
+    return False
 
 
 def is_letter(user_input):
@@ -35,8 +34,7 @@ def user_input_name():
         print("\033[1;31;10mPlease do not include digits in your name.")
         user_input_name()
     # else return name
-    else:
-        return name
+    return name
 
 
 def user_input_age():
@@ -59,8 +57,7 @@ def user_input_age():
         print("\n\033[1;31;10mIs this a correct age?")
         user_input_age()
     # else return age
-    else:
-        return age
+    return age
 
 
 def choose_unit():
@@ -108,8 +105,7 @@ def user_input_weight():
         print("\n\033[1;31;10mPlease do not include letter in your weight.")
         user_input_weight()
     # else return weight
-    else:
-        return weight
+    return weight
 
 
 def user_input_height():
@@ -126,8 +122,7 @@ def user_input_height():
         print("\n\033[1;31;10mPlease do not include letter in your height.")
         user_input_height()
     # Else return weight
-    else:
-        return height
+    return height
 
 
 def bmi_calculator():
