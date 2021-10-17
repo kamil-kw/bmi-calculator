@@ -445,6 +445,8 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 14. Navigate to the deploy tab
 15. Scroll down to Manual Deploy and select deploy branch.
 
+[Deployed version](https://bmi-calculator-pp3.herokuapp.com/)
+
 [Back to Table Of Content](#tableOfContents)
 
 <a name="endProduct"></a>
