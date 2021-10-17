@@ -15,48 +15,48 @@ Hope you will find intresting to use this tool.
 
 # Table of Contents
 
-[1. **UX**](#ux)
+[**1. UX**](#ux)
 * [**1.1. Strategy**](#strategy)
-    * [Project Goals](#projectGoals)
-    * [User target](#userTarget)
-    * [1st time visitors](#firstTime)
-    * [Returning visitors](#returning)
-    * [User expectations](#userExpectations)
+    * [**1.1.1 Project Goals**](#projectGoals)
+    * [**1.1.2 User target**](#userTarget)
+        * [**1st time visitors**](#firstTime)
+        * [**Returning visitors**](#returning)
+    * [**1.1.3 User expectations**](#userExpectations)
 
 * [**1.2. Structure**](#structure)
-    * [User input](#userInput)
-    * [Calculation outcome](#calculationOutcome)
-    * [Calculation method](#calculationMethod)
+    * [**1.2.1 User input**](#userInput)
+    * [**1.2.2 Calculation outcome**](#calculationOutcome)
+    * [**1.2.3 Calculation method**](#calculationMethod)
 
 * [**1.3. Skeleton**](#skeleton)
-* [**1.4. Surface**](#surface)
+* [**1.4. Color Scheme**](#colorScheme)
 
-[2. **Features**](#features)
+[**2. Features**](#features)
 
-[3. **Technologies Used**](#technologies)
+[**3. Technologies Used**](#technologies)
 
-[4. **Testing**](#testing)
-* [PEP8](#pep)
-* [Manual Testing](#manualTesting)
-* [Function tests](#functionTest)
+[**4. Testing**](#testing)
+* [**4.1 PEP8**](#pep)
+* [**4.2 Manual Testing**](#manualTesting)
+* [**4.3 Function tests**](#functionTest)
 
-[5. **Development Cycle**](#development)
+[**5. Development Cycle**](#development)
 
-[6. **Deployment**](#deployment)
+[**6. Deployment**](#deployment)
 
-[7. **End Product**](#endProduct)
+[**7. End Product**](#endProduct)
 
-[8. **Known Bugs**](#knownBugs)
-* [Fixed bugs](#fixedBugs)
-* [Remaining Bugs](#remainBugs)
+[**8. Known Bugs**](#knownBugs)
+* [**8.1 Fixed bugs**](#fixedBugs)
+* [**8.1 Remaining Bugs**](#remainBugs)
 
-[9. **Credit**](#credits)
+[**9. Credit**](#credits)
 
 [Back to Table Of Content](#tableOfContents)
 
 <a name="ux"></a>
 
-# 1. UX
+# **1. UX**
 
 As a next step on my path of becoming a software developer from zero to hero 😊, I'm presenting a BMI Calculator.
 
@@ -68,11 +68,13 @@ As part of my portfolio collection, which can be shown to my potential future em
 
 <a name="strategy"></a>
 
-# 1.1 Strategy
+# **1.1 Strategy**
 
 <a name="projectGoals"></a>
 
-## Project Goals
+##  **1.1.1 Project Goals**
+
+A project goal was to create a user-friendly BMI calculator for daily use, where users can monitor their weight health.
 
 The reason for this web page is to show my skills to potential recruiters and all who want to cooperate with me in the future in projects.
 
@@ -80,24 +82,24 @@ The project has been built by using Python 🐍. 
 
 <a name="userTarget"></a>
 
-## User Target
+## **1.1.2 User Target**
 
 <a name="firstTime"></a>
 
-### First time visitors
+### **First time visitors**
 
 * 1st time Visitors who wants to see my portfolio products;
 * 1st time Visitors who wants to use BMI calculator;
 
 <a name="returning"></a>
 
-### Returning visitors
+### **Returning visitors**
 
 * Visitors who would like to use calculation again
 
 <a name="userExpectations"></a>
 
-## User Expectations
+## **1.1.3 User Expectations**
 
 * Clear description
 * Intuitive process
@@ -107,11 +109,11 @@ The project has been built by using Python 🐍. 
 
 <a name="structure"></a>
 
-# 1.2. Structure
+# **1.2. Structure**
 
 <a name="userInput"></a>
 
-## User input
+## **1.2.1 User input**
 
 * **Name** which will be used to personalised messages
 * **Unit of measurement** to proceed calculation as per norm, 
@@ -124,18 +126,18 @@ BMI is widely known method, where you need to place details like:
 
 <a name="calculationOutcome"></a>
 
-## Calculation outcome
+## **1.2.2 Calculation outcome**
 
 Based on this values program will show your weight health values based on age under or over 18 as per list below:
 
-### Age Under 18:
+### **Age Under 18**:
 
 * Underweight         < 18.5
 * Normal              18.5 - 24.9
 * Overweight          25 -29.9
 * Obesity             > 29.9
 
-### Age Over 18:
+### **Age Over 18:**
 
 * Severe Thinness	    < 16
 * Moderate Thinness	    16 - 17
@@ -146,7 +148,7 @@ Based on this values program will show your weight health values based on age un
 * Obese Class II	    35 - 40
 * Obese Class III	    > 40
 
-## Calculation method
+## **1.2.3 Calculation method**
 
 Calculations are perform using two types of measurement units:
 
@@ -162,7 +164,7 @@ Calculations are perform using two types of measurement units:
 
 <a name="skeleton"></a>
 
-# 1.3. Skeleton
+# **1.3. Skeleton**
 
 Logic of this calculator is describe in the diagram below:
 
@@ -170,11 +172,11 @@ Logic of this calculator is describe in the diagram below:
 
 [Back to Table Of Content](#tableOfContents)
 
-<a name="surface"></a>
+<a name="colorScheme"></a>
 
-# 1.4. Surface
+# **1.4. Color Scheme**
 
-As a presentation level and to provide a clear understanding for user as well as what is currently expected form user I did choose to use ANSI gamma colors for:
+As a presentation level and to provide a clear understanding for user as well as what is currently expected from user I did choose to use ANSI gamma colors for:
 
 * **Title** in Bright Blue color (\033[1;34;40m)
 * **BMI logo** in multiple colors used in program
@@ -187,7 +189,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 <a name="features"></a>
 
-# 2. Features
+# **2. Features**
 
 * Describe your weight health
 * Present incorrect data type message in Bright Red color (\033[1;31;40m)
@@ -198,9 +200,9 @@ As a presentation level and to provide a clear understanding for user as well as
 
 <a name="technologies"></a>
 
-# 3. Technologies Used
+# **3. Technologies Used**
 
-### **During creation journey I did use:**
+**During creation journey I did use:**
 
 * [Chrome](https://www.google.com/intl/en_uk/chrome/)
     * Chrome dev tool used to debug and test code while building
@@ -221,11 +223,11 @@ As a presentation level and to provide a clear understanding for user as well as
 
 <a name="testing"></a>
 
-# 4. Testing
+# **4. Testing**
 
 <a name="pep"></a>
 
-## **PEP8**
+## **4.1 PEP8**
 
 * Test using PEP8 validator to avoid conventions errors, pass in first approach
 
@@ -233,7 +235,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 <a name="manualTesting"></a>
 
-## **Manual testing**
+## **4.2 Manual testing**
 
 * Incorrect type of data provided into the terminal to ensure triggering correct messages
 * Testing multiple scenarios to ensure correct color will be displayed to terminal
@@ -242,7 +244,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 <a name="functionTest"></a>
 
-## **Function tests**
+## **4.3 Function tests**
 
 ### **Name**
 
@@ -339,19 +341,24 @@ As a presentation level and to provide a clear understanding for user as well as
 
 <a name="development"></a>
 
-# 5. Development Cycle
+# **5. Development Cycle**
 
 Page was built based on a diagram defined in the beginning of the project.
 The first feature created was 'type your name' and 'main function' to allow all functions to run. Type your name gets a validation using a for loop, so each single character is tested to avoid digits input. Keeping in mind a good practice principle that *if any function can be built separately, better to do it*, I decided then to separate test for letter and digit as two functions, which can be reused where user input needs validation. User name also will be used as a part of personalised messages, and at this moment the user age function was built. Next process development was a function to choose units of measurement (SI - metric and USC - United States Customary), as this will increase the range of users. Unit of measurement is defined as a next stage of development, this is used to provide correct calculation, as per value provided by the user. Having all those details and scores in hand I was able to move to the next stage, where according to age and score the specific outcome appears in the program and will be presented to the user.
-The Last stage of the function building process was a *quite or continue* function where users can decide to recalculate value or end the process.
-Each function works correctly and was tested multiple times with multiple scenarios - [See testing photos](#testing). 
+The last stage of the function building process was a *quite or continue* function where users can decide to recalculate value or end the process.
+
 As a final implementation the colors as visual features were added to improve overall UX, ensuring that users see clearly what is happening.
+
+The additional functions updated at the last day were, check if character is placed to avoid enter presing without any data and check for special character, to cover all potential keyboard inputs which user can insert.
+
+Each function works correctly and was tested multiple times with multiple scenarios - [See testing photos](#testing). 
+
 
 [Back to Table Of Content](#tableOfContents)
 
 <a name="deployment"></a>
 
-# 6. Deployment
+# **6. Deployment**
 
 To deploy my final project to the cloud I used Heroku. To do this I had to:
 
@@ -375,7 +382,7 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 <a name="endProduct"></a>
 
-# 7. End Product
+# **7. End Product**
 
 ## **End Product screens**
 
@@ -387,21 +394,22 @@ To deploy my final project to the cloud I used Heroku. To do this I had to:
 
 <a name="knownBugs"></a>
 
-# 8. Known bugs
+# **8. Known bugs**
 
 <a name="fixedBugs"></a>
 
-## **Fixed bugs**
+## **8.1 Fixed bugs**
 
 During development I did face few bugs:
 
 * Transfering results between functions - fixed by setting return value to global scope
 * Calculation wasn't receiving float numbers - fixed by specifying the numbers from input to float in calculation
 * Breaching PEP8 conventions by typing too long lines (over 80 characters) - fixed by adding variables with text included in as string
+* User was able to type enter and skip type name section, and create program crush once typed during weight and height section - fixed by implementing two functions to check those scenarios
 
 <a name="remainBugs"></a>
 
-## **Remaining Bugs**
+## **8.2 Remaining Bugs**
 
 No bugs remaining
 
@@ -411,7 +419,7 @@ No bugs remaining
 
 <a name="credits"></a>
 
-# 9. Credits
+# **9. Credits**
 
 Heroku deployment instructions from Code Institute
 
@@ -419,4 +427,4 @@ GitHub Python Template [Code Institute](https://codeinstitute.net/)
 
 ### **Special thanks to**
 
-**@Marcel(Mentor) Mulder** for constructive feedback and amazing tips
+**@Marcel(Mentor) Mulders** for constructive feedback and amazing tips
