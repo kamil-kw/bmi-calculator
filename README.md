@@ -50,7 +50,7 @@ Hope you will find intresting to use this tool.
 * [**8.1 Fixed bugs**](#fixedBugs)
 * [**8.1 Remaining Bugs**](#remainBugs)
 
-[**9. Credit**](#credits)
+[**9. Credits**](#credits)
 
 [Back to Table Of Content](#tableOfContents)
 
@@ -97,6 +97,8 @@ The project has been built by using Python 🐍. 
 
 * Visitors who would like to use calculation again
 
+[Back to Table Of Content](#tableOfContents)
+
 <a name="userExpectations"></a>
 
 ## **1.1.3 User Expectations**
@@ -124,6 +126,8 @@ BMI is widely known method, where you need to place details like:
 * **Weight** of user in SI and USC
 * **Height** of user in SI and USC
 
+[Back to Table Of Content](#tableOfContents)
+
 <a name="calculationOutcome"></a>
 
 ## **1.2.2 Calculation outcome**
@@ -147,6 +151,10 @@ Based on this values program will show your weight health values based on age un
 * Obese Class I	        30 - 35
 * Obese Class II	    35 - 40
 * Obese Class III	    > 40
+
+[Back to Table Of Content](#tableOfContents)
+
+<a name="calculationMethod"></a>
 
 ## **1.2.3 Calculation method**
 
@@ -234,6 +242,8 @@ During creation journey I did use:
 
 ![PEP8](images_readme/pep8_result.png)
 
+[Back to Table Of Content](#tableOfContents)
+
 <a name="manualTesting"></a>
 
 ## **4.2 Manual testing**
@@ -242,6 +252,8 @@ During creation journey I did use:
 * Testing multiple scenarios to ensure correct color will be displayed to terminal
 * While coding, I did perform test through the terminal each time new function was implemented, also used a VS Code to test function separately
 * Tested final project on Heroku
+
+[Back to Table Of Content](#tableOfContents)
 
 <a name="functionTest"></a>
 
@@ -265,6 +277,7 @@ During creation journey I did use:
 
 ![Name Pass](images_readme/name_test.png)
 
+[Back to Table Of Content](#tableOfContents)
 
 ### **Age**
 
@@ -275,6 +288,8 @@ During creation journey I did use:
 ***Age Pass Test***
 
 ![Age Pass Test](images_readme/age_test_pass.png)
+
+[Back to Table Of Content](#tableOfContents)
 
 ### **Unit**
 
@@ -289,6 +304,8 @@ During creation journey I did use:
 ***Unit USC Pass Test***
 
 ![Unit USC Pass Test](images_readme/unit_usc_pass.PNG)
+
+[Back to Table Of Content](#tableOfContents)
 
 ### **Weight**
 
@@ -324,6 +341,8 @@ During creation journey I did use:
 
 ![Weight USC Pass Test](images_readme/weight_lbs_wrong.PNG)
 
+[Back to Table Of Content](#tableOfContents)
+
 ### **Height**
 
 ***Height SI Letter Test***
@@ -358,11 +377,15 @@ During creation journey I did use:
 
 ![Height USC Pass Test](images_readme/height_lbs_pass.png)
 
+[Back to Table Of Content](#tableOfContents)
+
 ### **Result**
 
 ***Result***
 
 ![Result](images_readme/result.PNG)
+
+[Back to Table Of Content](#tableOfContents)
 
 ### **Exit or Continue**
 
