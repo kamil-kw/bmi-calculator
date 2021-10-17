@@ -30,6 +30,22 @@ def is_char(user_input):
     return False
 
 
+def is_special_char(user_input):
+    """
+    Function is checking if input include any character
+    return boolean True or False
+    """
+    symbols = {'~', ':', "'", '+', '[',
+               '\\', '@', '^', '{', '%',
+               '(', '-', '"', '*', '|', ',',
+               '&', '<', '`', '}', '.', '_',
+               '=', ']', '!', '>', ';', '?',
+               '#', '$', ')', '/'}
+    if any(symbol in symbols for symbol in user_input):
+        return True
+    return False
+
+
 def user_input_name():
     """
     Function collecting a user name and use it globally
@@ -43,9 +59,13 @@ def user_input_name():
     if is_char(name) is True:
         print("\033[1;31;10mNo characters please type your name")
         user_input_name()
-    # if characters is digit -> message to user and repeat this function
+    # else if character is digit -> message to user and repeat this function
     elif is_digit(name) is True:
         print("\033[1;31;10mPlease do not include digits in your name.")
+        user_input_name()
+    # is special symbol -> message to user and repeat this function
+    elif is_special_char(name) is True:
+        print("\033[1;31;10mPlease do not include special symbols.")
         user_input_name()
 
     # else return name
@@ -74,6 +94,10 @@ def user_input_age():
     # if age is to high over 120 -> message to user and repeat this function
     elif int(age) >= 120:
         print("\n\033[1;31;10mIs this a correct age?")
+        user_input_age()
+    # is special symbol -> message to user and repeat this function
+    elif is_special_char(age) is True:
+        print("\033[1;31;10mPlease do not include special symbols.")
         user_input_age()
     # else return age
     return age
@@ -127,6 +151,10 @@ def user_input_weight():
     elif is_letter(weight) is True:
         print("\n\033[1;31;10mPlease do not include letter in your weight.")
         user_input_weight()
+    # is special symbol -> message to user and repeat this function
+    elif is_special_char(weight) is True:
+        print("\033[1;31;10mPlease do not include special symbols.")
+        user_input_weight()
     # else return weight
     return weight
 
@@ -147,6 +175,10 @@ def user_input_height():
     # Else if characters is digit -> message to user and repeat this function
     elif is_letter(height) is True:
         print("\n\033[1;31;10mPlease do not include letter in your height.")
+        user_input_height()
+    # is special symbol -> message to user and repeat this function
+    elif is_special_char(height) is True:
+        print("\033[1;31;10mPlease do not include special symbols.")
         user_input_height()
     # Else return height
     return height
