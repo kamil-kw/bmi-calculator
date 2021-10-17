@@ -20,6 +20,16 @@ def is_letter(user_input):
     return False
 
 
+def is_char(user_input):
+    """
+    Function is checking if input include any character
+    return boolean True or False
+    """
+    if len(user_input) == 0:
+        return True
+    return False
+
+
 def user_input_name():
     """
     Function collecting a user name and use it globally
@@ -29,10 +39,15 @@ def user_input_name():
     global name
     # User name input
     name = input('\n\033[1;32;10mPlease enter your name:\n')
+    # if no characters in input -> message to user and repeat this function
+    if is_char(name) is True:
+        print("\033[1;31;10mNo characters please type your name")
+        user_input_name()
     # if characters is digit -> message to user and repeat this function
-    if is_digit(name) is True:
+    elif is_digit(name) is True:
         print("\033[1;31;10mPlease do not include digits in your name.")
         user_input_name()
+
     # else return name
     return name
 
@@ -48,8 +63,12 @@ def user_input_age():
     enter_age = " please enter your age:"
     # User age input
     age = input(f"\n\033[1;32;10mHi {name.capitalize()}{enter_age}\n")
+    # if no characters in input -> message to user and repeat this function
+    if is_char(age) is True:
+        print("\033[1;31;10mNo characters please type your age")
+        user_input_age()
     # if characters is letter -> message to user and repeat this function
-    if is_letter(age) is True:
+    elif is_letter(age) is True:
         print("\n\033[1;31;10mPlease do not include letter in your age.")
         user_input_age()
     # if age is to high over 120 -> message to user and repeat this function
@@ -100,8 +119,12 @@ def user_input_weight():
     global weight
     # User weight input
     weight = input(f"\n\033[1;32;10mHi {name.capitalize()} {enter_weight}:\n")
+    # if no characters in input -> message to user and repeat this function
+    if is_char(weight) is True:
+        print("\033[1;31;10mNo characters please type your weight")
+        user_input_weight()
     # if characters is digit -> message to user and repeat this function
-    if is_letter(weight) is True:
+    elif is_letter(weight) is True:
         print("\n\033[1;31;10mPlease do not include letter in your weight.")
         user_input_weight()
     # else return weight
@@ -117,11 +140,15 @@ def user_input_height():
     global height
     # User height input
     height = input(f"\n\033[1;32;10mHi {name.capitalize()} {enter_height}:\n")
-    # If characters is digit -> message to user and repeat this function
-    if is_letter(height) is True:
+    # if no characters in input -> message to user and repeat this function
+    if is_char(height) is True:
+        print("\033[1;31;10mNo characters please type your height")
+        user_input_height()
+    # Else if characters is digit -> message to user and repeat this function
+    elif is_letter(height) is True:
         print("\n\033[1;31;10mPlease do not include letter in your height.")
         user_input_height()
-    # Else return weight
+    # Else return height
     return height
 
 
