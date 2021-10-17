@@ -166,7 +166,7 @@ Calculations are perform using two types of measurement units:
 
 # **1.3. Skeleton**
 
-Logic of this calculator is described in the diagram below:
+Logic of this calculator is describe in the diagram below:
 
 ![flow](images_readme/flow_final.png)
 
