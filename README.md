@@ -88,8 +88,8 @@ The project has been built by using Python 🐍. 
 
 ### **First time visitors**
 
-* 1st time Visitors who wants to see my portfolio products;
 * 1st time Visitors who wants to use BMI calculator;
+* 1st time Visitors who wants to see my portfolio products;
 
 <a name="returning"></a>
 
@@ -116,13 +116,13 @@ The project has been built by using Python 🐍. 
 ## **1.2.1 User input**
 
 * **Name** which will be used to personalised messages
-* **Unit of measurement** to proceed calculation as per norm, 
+* **Unit of measurement** to proceed calculation as per norm
 
 BMI is widely known method, where you need to place details like:
 
-* **Age** to define if user is under or over 18
-* **Weight** of user
-* **Height** of user 
+* **Age** to define if user is under or over 18, as there are different score groups. 
+* **Weight** of user in SI and USC
+* **Height** of user in SI and USC
 
 <a name="calculationOutcome"></a>
 
@@ -176,7 +176,8 @@ Logic of this calculator is describe in the diagram below:
 
 # **1.4. Color Scheme**
 
-As a presentation level and to provide a clear understanding for user as well as what is currently expected from user I did choose to use ANSI gamma colors for:
+To provide better user experience, I have decided to use color scheme as desribed below. The goal of introducing the colors was to provide a clear (intuitive) instructions to users i.e. if incorrect data input the text will change the color to red. 
+The colors used were from ANSI gamma, as described below:
 
 * **Title** in Bright Blue color (\033[1;34;40m)
 * **BMI logo** in multiple colors used in program
@@ -191,7 +192,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 # **2. Features**
 
-* Describe your weight health
+* Program will describe your weight health
 * Present incorrect data type message in Bright Red color (\033[1;31;40m)
 * Personalised messages with "Hi {name} ..." format
 * Splitting sections to ensure good readability while run the code
@@ -202,7 +203,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 # **3. Technologies Used**
 
-**During creation journey I did use:**
+During creation journey I did use:
 
 * [Chrome](https://www.google.com/intl/en_uk/chrome/)
     * Chrome dev tool used to debug and test code while building
@@ -231,7 +232,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 * Test using PEP8 validator to avoid conventions errors, pass in first approach
 
-![PEP8](images_readme/pep8_result.PNG)
+![PEP8](images_readme/pep8_result.png)
 
 <a name="manualTesting"></a>
 
@@ -239,7 +240,7 @@ As a presentation level and to provide a clear understanding for user as well as
 
 * Incorrect type of data provided into the terminal to ensure triggering correct messages
 * Testing multiple scenarios to ensure correct color will be displayed to terminal
-* While coding, I did perform test through the terminal each time once new function was implemented, also used a VS Code to test function separately
+* While coding, I did perform test through the terminal each time new function was implemented, also used a VS Code to test function separately
 * Tested final project on Heroku
 
 <a name="functionTest"></a>
@@ -252,19 +253,28 @@ As a presentation level and to provide a clear understanding for user as well as
 
 ![Name Digit Test](images_readme/name_digit_test.PNG)
 
+***Name No Charater Test***
+
+![Name No Charater Test](images_readme/name_no_char.png)
+
+***Name Special Character Test***
+
+![Name Special Character Test](images_readme/name_special_char.png)
+
 ***Name Pass Test***
 
-![Name Pass](images_readme/name_test.PNG)
+![Name Pass](images_readme/name_test.png)
+
 
 ### **Age**
 
 ***Age Letter Test***
 
-![Age Letter Test](images_readme/age_letter_test.PNG)
+![Age Letter Test](images_readme/age_letter_test.png)
 
 ***Age Pass Test***
 
-![Age Pass Test](images_readme/age_test_pass.PNG)
+![Age Pass Test](images_readme/age_test_pass.png)
 
 ### **Unit**
 
@@ -286,6 +296,14 @@ As a presentation level and to provide a clear understanding for user as well as
 
 ![Weight SI Letter Test](images_readme/weight_si_wrong.PNG)
 
+***Weight SI No Character Test***
+
+![Weight SI No Character Test](images_readme/weight_si_no_char.png)
+
+***Weight SI Special Character Test***
+
+![Weight SI Special Character Test](images_readme/weight_si_special_char.png)
+
 ***Weight SI Pass Test***
 
 ![Weight SI Pass Test](images_readme/weight_si_pass.PNG)
@@ -293,6 +311,14 @@ As a presentation level and to provide a clear understanding for user as well as
 ***Weight USC Letter Test***
 
 ![Weight USC Letter Test](/images_readme/weight_lbs_pass.PNG)
+
+***Weight USC No Character Test***
+
+![Weight SI No Character Test](images_readme/weight_usc_no_char.png)
+
+***Weight USC Special Character Test***
+
+![Weight SI Special Character Test](images_readme/weight_usc_special_char.png)
 
 ***Weight USC Pass Test***
 
@@ -304,6 +330,14 @@ As a presentation level and to provide a clear understanding for user as well as
 
 ![Height SI Letter Test](images_readme/height_si_wrong.PNG)
 
+***Height SI No Character Test***
+
+![Height SI No Character Test](images_readme/height_si_no_char.png)
+
+***Height SI Special Character Test***
+
+![Height SI Special Character Test](images_readme/height_si_special_char.png)
+
 ***Height SI Pass Test***
 
 ![Height SI Pass Test](images_readme/height_si_pass.PNG)
@@ -311,6 +345,14 @@ As a presentation level and to provide a clear understanding for user as well as
 ***Height USC Letter Test***
 
 ![Height USC Letter Test](images_readme/height_lbs_wrong.PNG)
+
+***Height USC No Character Test***
+
+![Height USC No Character Test](images_readme/height_usc_no_char.png)
+
+***Height USC Special Character Test***
+
+![Height USC Special Character Test](images_readme/height_usc_special_char.png)
 
 ***Height USC Pass Test***
 
@@ -349,7 +391,9 @@ The last stage of the function building process was a *quite or continue* functi
 
 As a final implementation the colors as visual features were added to improve overall UX, ensuring that users see clearly what is happening.
 
-The additional functions updated at the last day were, check if character is placed to avoid enter presing without any data and check for special character, to cover all potential keyboard inputs which user can insert.
+The additional functions updated at the last day were:
+* program check if there was any input made prior of pressing enter button. If no entry made and user press the enter button system will come back with error message. 
+* check to disable user from entering special characters. If special character entered, error message will be displayed. 
 
 Each function works correctly and was tested multiple times with multiple scenarios - [See testing photos](#testing). 
 
@@ -405,7 +449,8 @@ During development I did face few bugs:
 * Transfering results between functions - fixed by setting return value to global scope
 * Calculation wasn't receiving float numbers - fixed by specifying the numbers from input to float in calculation
 * Breaching PEP8 conventions by typing too long lines (over 80 characters) - fixed by adding variables with text included in as string
-* User was able to type enter and skip type name section, and create program crush once typed during weight and height section - fixed by implementing two functions to check those scenarios
+* User was able to press enter and skip type name section. This problem was causing program to crush in weight and height section - fixed by implementing two functions to check those scenarios
+* Entering special characters in weight and height section was causing program to crush - fixed by implementing function to check if special character is used. 
 
 <a name="remainBugs"></a>
 
